@@ -1,1 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Next Level Gaming | Home</title>
+  <link rel="stylesheet" href="Homepage.css">
+  <link rel="stylesheet" href="Homepage.js">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+  <div class="logo">
+    <h1><img src="logo.png" alt="Next Level Gaming Logo">Next Level Gaming</h1>
+	</div>
+	
+	<div class="navbar">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Browse Games</a></li>
+        <li><a href="#">Sell Games</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+	</div>
+  </header>
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="test4.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="test5.jpeg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="test3.jpeg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<!-- JavaScript -->
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 8000); // Change image every few seconds
+}
+</script>
+
+<main>
+	
+    <section id="hero">
+      <h2>Welcome to Next Level Gaming</h2>
+      <p>Find great deals on pre-owned video games and consoles.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </section>
+    
+    <section id="featured-games">
+      <h2>Featured Games</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="missing.jpg" alt="Game 1">
+            <h3>Game 1</h3>
+            <p>$20</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="missing.jpg" alt="Game 2">
+            <h3>Game 2</h3>
+            <p>$15</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="missing.jpg" alt="Game 3">
+            <h3>Game 3</h3>
+            <p>$30</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+    
+    <section id="sell-games">
+      <h2>Sell Your Games</h2>
+      <p>Want to sell your old games? We make it easy. Just fill out our online form and we'll get back to you with a quote.</p>
+      <a href="#" class="btn">Sell Now</a>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 . All rights reserved.</p>
+  </footer>
+</body>
+</html>
