@@ -14,6 +14,25 @@
       integrity="sha384-2QePCGcPGi/C0t0sCtYgn1p9hLr0vT7Vj+bLfBdVNnnkW/OoPhlGm7ZsYs1m/F8W"
       crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	  
+    <script>
+		$(document).ready(function() {
+			$('form').submit(function(event) {
+				event.preventDefault();
+				var name = $('#name').val();
+				var email = $('#email').val();
+				var message = $('#message').val();
+				if (name == '' || email == '' || message == '') {
+					alert('Please fill out all the required fields.');
+					return;
+				}
+				$('form').html('<h2 id="texttest">Thank you for submitting your form!</h2>');
+				$('#name').val('');
+				$('#email').val('');
+				$('#message').val('');
+			});
+		});
+	</script>
 	
   </head>
   <body>
