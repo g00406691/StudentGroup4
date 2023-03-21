@@ -214,8 +214,16 @@ img {vertical-align: middle;}
 .imgcontainer {
   position: relative;
   width: 33%;
-  height: 500px;
-  padding: 20px;
+  height: 700px;
+  padding: 50px;
+  display: inline-block;
+}
+
+.imgcontainer2 {
+  position: relative;
+  width: 33%;
+  height: 700px;
+  padding: 50px;
   display: inline-block;
 }
 
@@ -248,10 +256,25 @@ img {vertical-align: middle;}
   opacity: 1;
 }
 
+.imgcontainer2:hover .image {
+  opacity: 0.3;
+}
+
+.imgcontainer2:hover .middle {
+  opacity: 1;
+}
+
 .text {
   background-color: #04AA6D;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+}
+
+footer {
+	font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background-color: #e12901; 
+	padding: 20px;
 }
 
