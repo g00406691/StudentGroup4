@@ -100,6 +100,7 @@ img{
     transition: .5s ease;
     backface-visibility: hidden;
     position: relative;
+	padding: 50px;
   }
   
   .middle {
@@ -128,3 +129,9 @@ img{
     padding: 16px 32px;
   }
   
+footer {
+	font-family: 'Fredoka One', cursive;
+    color: #fff;
+    background-color: #e12901; 
+	padding: 20px;
+}
