@@ -35,7 +35,7 @@ header {
 
 .container{
     min-height: 100vh;
-    background: #eee;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,3 +94,4 @@ nav a {
   color: #fff;
   text-decoration: none;
 }
+
