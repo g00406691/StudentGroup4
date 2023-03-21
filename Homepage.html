@@ -49,14 +49,16 @@
 <br>
 
 <div style="text-align:center">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-  <span class="dot"></span> 
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
 <!-- JavaScript -->
 <script>
   let slideIndex = 0;
+  let timeout;
+
   showSlides();
 
   function showSlides() {
@@ -92,7 +94,22 @@
     }
     dots[slideIndex-1].className += " active";
 
-    setTimeout(showSlides, 8000); // Change image every few seconds
+    // Change image every few seconds
+    timeout = setTimeout(showSlides, 8000);
+  }
+
+  function currentSlide(n) {
+    clearTimeout(timeout);
+    slideIndex = n;
+    showSlides();
+  }
+
+  // Add event listener to each dot
+  let dotButtons = document.getElementsByClassName("dot");
+  for (let i = 0; i < dotButtons.length; i++) {
+    dotButtons[i].addEventListener("click", function() {
+      currentSlide(i + 1);
+    });
   }
 </script>
 
@@ -140,4 +157,3 @@
   </footer>
 </body>
 </html>
-
