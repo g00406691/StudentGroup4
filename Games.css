@@ -1,11 +1,7 @@
-*{
-    font-family: 'Fredoka One', cursive;
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    border: none;
-    text-transform: uppercase;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .grid {
@@ -17,15 +13,17 @@
 }
 
 header {
-    font-family: 'Fredoka One', cursive;
-    font-size: 20px;
-    background-color: #e12901;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    height: 130px;
+   font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  background-color: #e12901;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 130px;
+  position: relative;
+  z-index: 2;
   }
   
    header img {
@@ -89,7 +87,7 @@ img{
 .imgcontainer {
     position: relative;
     width: 33%;
-    height: 500px;
+    height: 700px;
     padding: 20px;
     display: inline-block;
   }
