@@ -8,36 +8,56 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Fredoka One', cursive;
   font-size: 15px;
   background-color: #e12901;
   color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem;
-  height: 130px;
+  height: 110px;
   position: relative;
   z-index: 2;
 }
 
+.h1text {
+	font-size: 40px;
+	margin-top: 12px;
+}
+
+
  header img {
-    width: 90px;
+    width: 80px;
+	
  }
   
-  h2 {
+ .fg-h2 {
 	 padding: 30px;
 	 padding-left: 40px;
 	 font-family: 'Fredoka One', cursive;
+	 font-size: 50px;
   }
   
-  form {
+ form {
 	  padding: 10px;
 	  padding-left: 40px;
   }
   
+  
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+  
 nav ul {
   display: flex;
+  justify-content: flex-end;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -87,6 +107,10 @@ nav a {
     z-index: -1;
 }
 
+.logopng {
+	size: 10%;
+}
+
 
 #hero {
   background-size: cover;
@@ -100,14 +124,14 @@ nav a {
 #hero h2 {
 	font-family: 'Fredoka One', cursive;
 	color: #e12901;
-	font-size: 3.5rem;
+	font-size: 4.5rem;
 	margin: 0;
 }
 
 #hero p {
 	font-family: 'Fredoka One', cursive;
 	color: #e12901;
-	font-size: 1.5rem;
+	font-size: 1.9rem;
 	margin: 0;
 }
 
@@ -140,9 +164,12 @@ img {vertical-align: middle;}
 }
 
 .button1 {
-  padding: 12px 20px;
+  padding: 16px 32px;
   font-size: 16px;
   text-align: center;
+  left: 8%;
+  bottom: 100%;
+  position: absolute;
   cursor: pointer;
   outline: none;
   font-family: 'Fredoka One', cursive;
@@ -162,49 +189,72 @@ img {vertical-align: middle;}
 }
 
 
-/*image with button in it*/
-.imgcontainer {
+.carousel-inner {
   position: relative;
   width: 33%;
-  height: 700px;
+  height: 470px;
   padding: 50px;
   display: inline-block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.carousel-indicators {
+	width: 100%;
+	margin: auto;
+	position: center;
+	}
+
+#featured-games {
+	background-color: #fd8f52;
+}
+
+#featured-games h2 {
+	color: white;
+	font-size: 50px;
+}
+
+#popular-games h2 {
+	font-size: 50px;
+}
+
+.imgcontainer1 {
+  position: relative;
+  width: 33%;
+  height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .imgcontainer2 {
   position: relative;
   width: 33%;
-  height: 700px;
+  height: 470px;
   padding: 50px;
   display: inline-block;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;	
 }
 
 .image {
   opacity: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
+  max-width: 85%;
+  max-height: 87%;
   transition: .5s ease;
   backface-visibility: hidden;
-  position: relative;
 }
 
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 80%; 
-  left: 50%;
-  transform: translate(-50%, 50%);
-  -ms-transform: translate(-50%, 50%);
-  text-align: center;
-}
 
-.imgcontainer:hover .image {
+
+.imgcontainer1:hover .image {
   opacity: 0.3;
 }
 
-.imgcontainer:hover .middle {
+.imgcontainer1:hover .middle {
   opacity: 1;
 }
 
@@ -217,10 +267,16 @@ img {vertical-align: middle;}
 }
 
 .text {
-  background-color: #04AA6D;
+  background-color: #e12901;
   color: white;
   font-size: 16px;
   padding: 16px 32px;
+  cursor: pointer;
+  font-family: 'Fredoka One', cursive;
+  border: none;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 footer {
