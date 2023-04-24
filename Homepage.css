@@ -9,7 +9,7 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: 'Fredoka One', cursive;
   font-size: 15px;
@@ -29,9 +29,14 @@ header {
 
  header img {
     width: 80px;
-	
+	margin-right: 1rem;
  }
-  
+
+.logopng:hover {
+	background-image: url('');
+
+}
+ 
  .fg-h2 {
 	 padding: 30px;
 	 padding-left: 40px;
@@ -65,13 +70,15 @@ nav ul {
 
 nav li {
   margin-left: 1rem;
-  padding: 5px;
+  padding: 0px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
 }
+
+
 
 .homeimg, .contactimg {
 	width: 40px;
@@ -91,7 +98,7 @@ nav a {
 .bg-container {
     position: relative;
     width: 100%;
-    height: 400px;
+    height: 500px;
 }
 		
 .bg-image {
@@ -100,11 +107,37 @@ nav a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("ad2.png");
+    background-image: url("background-ad.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     z-index: -1;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .bg-image {
+        background-image: url("ad2.png")
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .bg-image {
+        background-image: url("top-ad2.png")
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .bg-image {
+        background-image: url("top-ad3.png")
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .bg-image {
+        background-image: url("top-ad4.png")
+    }
 }
 
 .logopng {
