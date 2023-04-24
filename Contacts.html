@@ -37,21 +37,34 @@
   </head>
   <body>
   <header>
-  <div class="logo">
-    <h1><img src="logo.png" alt="Next Level Gaming Logo">Next Level Gaming</h1>
+	<!-- logo-->
+    <div class="logo">
+    <h1 class="h1text"><img id="logopng" src="logo.png">Next Level Gaming</h1>
+	
+	<script>
+    $(function() {
+        $("#logopng").hover(
+            function() {
+                $(this).attr("src", "logogif2.gif");
+            },
+            function() {
+                $(this).attr("src", "logo.png");
+            }                         
+        );                  
+    });
+</script>
+	
+	<nav>
+      <ul>
+        <li><a href="Homepage.html"><img class="homeimg" title="Home" src="homeicon.png"></a></li>
+        <li><a href="Games.html"><img class="searchimg" title="Browse Games" src="searchicon.png"></a></li>
+        <li><a href="Login.html"><img class="cartimg" title="Your Cart" src="shoppingcarticon.png"></a></li>
+        <li><a href="Contacts.html"><img class="contactimg" title="Contact Us" src="contacticon.png"></a></li>
+      </ul>
+    </nav>
 	</div>
 	
-<div class="navbar">
-          <nav>
-            <ul>
-              <li><a href="Homepage.html">Home</a></li>
-              <li><a href="Games.html">Browse Games</a></li>
-              <li><a href="Login.html">Log in/Sign Up</a></li>
-              <li><a href="Contacts.html">Contact Us</a></li>
-            </ul>
-          </nav>
-          </div>
-        </header>
+  </header>
   
 	 <div class="container mt-4">
       <h1>Contact Us</h1>
