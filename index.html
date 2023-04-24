@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>W3.CSS Template</title>
+<title>Next-Level Gaming | Home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -9,8 +9,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <style>
 body {font-family: 'Fredoka One', cursive;}
+h1 {font-family: 'Fredoka One', cursive;}
 .mySlides {display: none}
 </style>
 </head>
@@ -18,16 +20,43 @@ body {font-family: 'Fredoka One', cursive;}
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-red w3-bar w3-card w3-right">
+  <div class="w3-red w3-bar w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    
+    <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
+      <h1>
+        <img id="logopng" src="logo.png" alt="Next Level Gaming Logo" style="width:50px; 10px;">
+         Next Level Gaming</h1>
+      
+      <script>
+        $(function() {
+        $("#logopng").hover(
+            function() {
+                $(this).attr("src", "logo-gif (2).gif");
+            },
+            function() {
+                $(this).attr("src", "logo.png");
+            }                         
+        );                  
+    });
+      </script>
+    </div>
+	
 	<a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Home">
-    <img src="homeicon.png" alt="Home Icon" style="width: 35px">
+    <img src="homeicon2.png" alt="Home" style="width: 35px; padding-top: 10px;">
     </a>
 
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">TOUR</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Search">
+    <img src="search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
+    </a>
+
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Cart">
+    <img src="shopping-cart2.png" alt="Cart" style="width: 35px; padding-top: 10px;">
+    </a>
+
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Contact Us">
+    <img src="form.png" alt="Contact" style="width: 35px; padding-top: 10px;">
+    </a>
+
       </div>
     </div>
 
@@ -35,7 +64,7 @@ body {font-family: 'Fredoka One', cursive;}
 </div>
 
 <!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+<div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top " style="margin-top:46px">
   <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
   <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
@@ -91,7 +120,8 @@ body {font-family: 'Fredoka One', cursive;}
           <div class="w3-container w3-white">
             <p><b>The Witcher 3: Wild Hunt</b></p>
             <p class="w3-opacity">€15.99</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <p>The Witcher 3: Wild Hunt features a massive open world, a sprawling narrative and easily 100 hours 
+			of content based on exploring the world and meeting its inhabitants.</p>
             <button class="w3-button w3-red w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
           </div>
         </div>
@@ -100,7 +130,8 @@ body {font-family: 'Fredoka One', cursive;}
           <div class="w3-container w3-white">
             <p><b>Red Dead Redemption 2</b></p>
             <p class="w3-opacity">€19.99</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <p>Red Dead Redemption 2 is a western tale, filled with gunslinging-action, horseback exploration, greed, loyalty, 
+			and the overall treachery of the old west.</p>
             <button class="w3-button w3-red w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
           </div>
         </div>
@@ -109,7 +140,8 @@ body {font-family: 'Fredoka One', cursive;}
           <div class="w3-container w3-white">
             <p><b>Final Fantasy XV</b></p>
             <p class="w3-opacity">€14.99</p>
-            <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+            <p>Final Fantasy XV is a RPG set in somewhat modern times but with fantasy and sci-fi influences. 
+			the story focuses on Noctis Lucis Caelum, a prince on an epic journey from the kingdom of Lucis.</p>
             <button class="w3-button w3-red w3-margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
           </div>
         </div>
@@ -123,7 +155,7 @@ body {font-family: 'Fredoka One', cursive;}
       <header class="w3-container w3-red w3-center w3-padding-32"> 
         <span onclick="document.getElementById('ticketModal').style.display='none'" 
        class="w3-button w3-red w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Y</h2>
+        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Your Cart</h2>
       </header>
       <div class="w3-container">
         <p><label><i class="fa fa-shopping-cart"></i> Add to Cart</label></p>
