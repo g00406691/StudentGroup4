@@ -18,7 +18,20 @@
   <header>
 	<!-- logo-->
     <div class="logo">
-    <h1 class="h1text"><img class="logopng" src="logo.png" alt="Next Level Gaming Logo">Next Level Gaming</h1>
+    <h1 class="h1text"><img id="logopng" src="logo.png" alt="Next Level Gaming Logo">Next Level Gaming</h1>
+	
+	<script>
+    $(function() {
+        $("#logopng").hover(
+            function() {
+                $(this).attr("src", "logogif2.gif");
+            },
+            function() {
+                $(this).attr("src", "logo.png");
+            }                         
+        );                  
+    });
+</script>
 	
 	<nav>
       <ul>
@@ -30,8 +43,9 @@
     </nav>
 	</div>
 	
-  </header>
 	
+	
+  </header>
 
 
 <main>
