@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="javascript" href="assets/js/cart.js" </head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Shopping Cart</a>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Cart</a>
+      </li>
+    </ul>
+    <div class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal"
+        data-target="#loginModal">Login</button>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h2>Products</h2>
+    <div class="row">
+      <div class="col-md-4 my-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Featured Games</h5>
+            <p class="card-text">The Whicher 3.</p>
+            <p class="card-text">€15.99</p>
+            <a href="#" class="btn btn-primary" onclick="addToCart('Product 1', 10)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Featured games</h5>
+            <p class="card-text">Red Dead Redemption 2</p>
+            <p class="card-text">€19.99</p>
+            <a href="#" class="btn btn-primary" onclick="addToCart('Product 2', 15)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 my-3">
+        <div class="card">
+          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Product Image">
+          <div class="card-body">
+            <h5 class="card-title">Featured Games</h5>
+            <p class="card-text">Final Fantasy 15.</p>
+            <p class="card-text">€14.99</p>
+            <a href="#" class="btn btn-primary" onclick="addToCart('Product 3', 20)">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container my-5">
+    <h2>Cart</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+      <tbody id="cartItems">
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4" class="text-right">Subtotal:</td>
+          <td id="subtotal">$0.00</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="text-right">Tax:</td>
+          <td id="tax">$0.00</td>
+        </tr>
+        <tr>
+          <td colspan="4" class="text-right">Total:</td>
+          <td id="total">$0.00</td>
+        </tr>
+      </tfoot>
+    </table>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal"
+      onclick="showCheckout()">Checkout</button>
+  </div>
+
+  <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="checkoutModalLabel">Checkout</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
+            </div>
+            <div class="form-group">
+              <label for="cardHolderName">Card Holder Name</label>
+              <input type="text" class="form-control" id="cardHolderName" placeholder="Enter card holder name">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="expiryDate">Expiry Date</label>
+                  <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cvv">CVV</label>
+                  <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="placeOrder()">Place Order</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
