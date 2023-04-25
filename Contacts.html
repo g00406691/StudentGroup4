@@ -27,6 +27,11 @@
     h1 {
       font-family: 'Fredoka One', cursive;
     }
+
+    .w3-button:hover {
+      background-color: rgba(52,52,52,0.3) !important;
+    }
+
   </style>
 </head>
 
@@ -34,53 +39,55 @@
   <!-- Navbar -->
   <div class="w3-top">
     <div class="w3-red w3-bar w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)"
+     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)"
         onclick="myFunction()" title="Toggle Navigation Menu" style="float: right;"><i class="fa fa-bars"></i></a>
-      <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
-        <h1>
-          <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
-          Next Level Gaming
-        </h1>
-
-        <script>
-          $(function () {
-            $("#logopng").hover(
-              function () {
-                $(this).attr("src", "assets/img/logo-gif (2).gif");
-              },
-              function () {
-                $(this).attr("src", "assets/img/logo.png");
-              }
-            );
-          });
-        </script>
-      </div>
-
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Home">
-        <img src="assets/img/homeicon2.png" alt="Home" style="width: 35px; padding-top: 10px;">
+        <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
+          <h1>
+            <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
+            Next Level Gaming
+          </h1>
+  
+          <script>
+            $(function () {
+              $("#logopng").hover(
+                function () {
+                  $(this).attr("src", "assets/img/logo-gif (2).gif");
+                },
+                function () {
+                  $(this).attr("src", "assets/img/logo.png");
+                }
+              );
+            });
+          </script>
+        </div>
+      
+      <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Contact Us">
+        <img src="assets/img/form.png" alt="Contact" style="width: 35px; padding-top: 10px;">
       </a>
 
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Search">
-        <img src="assets/img/search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
-      </a>
-
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Cart">
+      <a href="cart.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Cart">
         <img src="assets/img/shopping-cart2.png" alt="Cart" style="width: 35px; padding-top: 10px;">
       </a>
 
-      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Contact Us">
-        <img src="assets/img/form.png" alt="Contact" style="width: 35px; padding-top: 10px;">
+      <a href="games.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Search">
+        <img src="assets/img/search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
       </a>
+
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Home">
+        <img src="assets/img/homeicon2.png" alt="Home" style="width: 35px; padding-top: 10px;">
+      </a>
+
+
 
     </div>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top " style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Home</a>
+    <a href="games.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Games</a>
+    <a href="cart.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Cart</a>
+    <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
   </div>
 
   <div class="container mt-4">
