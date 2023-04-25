@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSS -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,8 +36,7 @@
     background-size: cover;
     min-height: 100vh;
     width: 100%;
-  }
-	
+	}
 
   </style>
 </head>
@@ -54,16 +54,16 @@
         </h1>
 
         <script>
-          $(function () {
-            $("#logopng").hover(
-              function () {
+          $(function() {
+        $("#logopng").hover(
+            function() {
                 $(this).attr("src", "assets/img/logo-gif (2).gif");
-              },
-              function () {
+            },
+            function() {
                 $(this).attr("src", "assets/img/logo.png");
-              }
-            );
-          });
+            }                         
+        );                  
+    });
         </script>
       </div>
 
@@ -75,7 +75,7 @@
         <img src="assets/img/shopping-cart2.png" alt="Cart" style="width: 35px; padding-top: 10px;">
       </a>
 
-      <a href="games.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Search">
+      <a href="games.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Browse">
         <img src="assets/img/search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
       </a>
 
@@ -89,7 +89,7 @@
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top " style="margin-top:46px">
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Home</a>
-    <a href="games.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Games</a>
+    <a href="games.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Browse</a>
     <a href="cart.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Cart</a>
     <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
   </div>
@@ -124,10 +124,10 @@
     <span class="w3-jumbo w3-hide-small">Upgrade your setup today</span><br>
     <span class="w3-xxlarge w3-hide-large w3-hide-medium">Upgrade your setup today</span><br>
     <span class="w3-large">Browse our library of great value games.</span>
-    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Browse Now</a></p>
+    <p><a href="games.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Browse Now</a></p>
   </div>
 </div>
-<br>
+
 
     <!-- The Tour Section -->
     <div class="w3-red" id="tour">
@@ -140,8 +140,8 @@
             <img src="assets/img/IMG_5312.jpg" alt="The Witcher 3" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
               <p><b>The Witcher 3: Wild Hunt</b></p>
-              <p class="w3-opacity">€15.99</p>
-              <p>Edit</p>
+              <p class="w3-opacity">PS4</p>
+              <p>€15.99</p>
               <button class="w3-button w3-red w3-margin-bottom"
                 onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
             </div>
@@ -150,8 +150,8 @@
             <img src="assets/img/IMG_5307.jpg" alt="Red Dead Redemption 2" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
               <p><b>Red Dead Redemption 2</b></p>
-              <p class="w3-opacity">€19.99</p>
-              <p>Edit</p>
+              <p class="w3-opacity">PS4</p>
+              <p>€19.99</p>
               <button class="w3-button w3-red w3-margin-bottom"
                 onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
             </div>
@@ -160,8 +160,8 @@
             <img src="assets/img/IMG_5304.jpg" alt="Final Fantasy XV" style="width:100%" class="w3-hover-opacity">
             <div class="w3-container w3-white">
               <p><b>Final Fantasy XV</b></p>
-              <p class="w3-opacity">€14.99</p>
-              <p>Edit</p>
+              <p class="w3-opacity">PS4</p>
+              <p>€14.99</p>
               <button class="w3-button w3-red w3-margin-bottom"
                 onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
             </div>
@@ -183,8 +183,9 @@
           <input class="w3-input w3-border" type="text" placeholder="How many?">
           <p><label><i class="fa fa-user"></i> Log in to your account</label></p>
           <input class="w3-input w3-border" type="text" placeholder="Enter username">
-          <button class="w3-button w3-block w3-red w3-padding-16 w3-section w3-right">Add To Cart <i
-              class="fa fa-check"></i></button>
+          <button class="w3-button w3-block w3-red w3-padding-16 w3-section w3-right">
+		  <a href="cart.html">Add To Cart <i
+              class="fa fa-check"></i></a></button>
           <button class="w3-button w3-red w3-section"
             onclick="document.getElementById('ticketModal').style.display='none'">Close <i
               class="fa fa-remove"></i></button>
