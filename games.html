@@ -4,25 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/games.css">
+    <link rel="stylesheet" href="./assets/css/gamespage.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"rel="stylesheet"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Games</title>
-  <style>
-    body {
-      font-family: 'Fredoka One', cursive;
-    }
 
-    h1 {
-      font-family: 'Fredoka One', cursive;
-    }
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        perspective: 1000px;
+      }
+      
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      }
+      
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+      
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+      
+      .flip-card-back {
+        background-color: #2980b9;
+        color: white;
+        transform: rotateY(180deg);
+      }
+      </style>
 
-    .w3-button:hover {
-      background-color: rgba(52,52,52,0.3) !important;
-    }
-  </style>
+
 
 </head>
 <body>
@@ -78,112 +113,114 @@
     <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
   </div>
 
-    <h1 class="Game-tag">Playstation</h1>
+   <h1 class="Game-tags"><b>Playstation</b></h1>
+
+    
 
     <div class="imgcontainer">
-        <img src="./Images/farcryps4.jpg" alt="Avatar" class="image">
+        <img src="./assets/img/farcryps4.jpg" alt="Avatar" class="image">
         <div class="middle">
         <a href="#" class="button1">Far Cry</a>
       </div>
       </div>
 
       <div class="imgcontainer">
-        <img src="./Images/hitmanps4.jpg" alt="Avatar" class="image">
+        <img src="./assets/img/hitmanps4.jpg" alt="Avatar" class="image">
         <div class="middle">
         <a href="#" class="button1">Hitman</a>
       </div>
       </div>
 
       <div class="imgcontainer">
-        <img src="./Images/horizonps4.jpg" alt="Avatar" class="image">
+        <img src="./assets/img/horizonps4.jpg" alt="Avatar" class="image">
         <div class="middle">
         <a href="#" class="button1">Horizon</a>
       </div>
       </div>
    
       <div class="imgcontainer">
-        <img src="./Images/finalfantasyps4.jpg" alt="Avatar" class="image">
+        <img src="./assets/img/finalfantasyps4.jpg" alt="Avatar" class="image">
         <div class="middle">
         <a href="#" class="button1">FF XV</a>
       </div>
       </div>
      
       <div class="imgcontainer">
-        <img src="./Images/reddeadps4.jpg" alt="Avatar" class="image">
+        <img src="./assets/img/reddeadps4.jpg" alt="Avatar" class="image">
         <div class="middle">
         <a href="#" class="button1">Red Dead</a>
       </div>
       </div>
 
-        <h1 class="Game-tag">Xbox 360</h1>
+        <h1 class="Game-tag"><b>Xbox 360</b></h1>
 
         <div class="imgcontainer">
-            <img src="./Images/batmanxbox.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/batmanxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Batman</a>
           </div>
           </div>
         
           <div class="imgcontainer">
-            <img src="./Images/bo3xbox.png" alt="Avatar" class="image">
+            <img src="./assets/img/bo3xbox.png" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Black Ops 3</a>
           </div>
           </div>
         
           <div class="imgcontainer">
-            <img src="./Images/codxbox.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/codxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">MW3</a>
           </div>
           </div>
         
           <div class="imgcontainer">
-            <img src="./Images/minecraftxbox.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/minecraftxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Minecraft</a>
           </div>
           </div>
           
           <div class="imgcontainer">
-            <img src="./Images/Farcryxbox.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/Farcryxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Far Cry 2</a>
           </div>
           </div>
 
-          <h1 class="Game-tag">Nintendo</h1>
+          <h1 class="Game-tag"><b>Nintendo</b></h1>
 
         <div class="imgcontainer">
-            <img src="./Images/mariodsi.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/mariodsi.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Mario</a>
           </div>
           </div>
         
           <div class="imgcontainer">
-            <img src="./Images/braintrainingds.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/braintrainingds.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Brain</a>
           </div>
           </div>
         
           <div class="imgcontainer">
-            <img src="./Images/marioandsonicds.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/marioandsonicds.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Olympic</a>
           </div>
           </div>
         
           <div class="imgcontainer">
-            <img src="./Images/mariokartds.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/mariokartds.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Mario Kart</a>
           </div>
           </div>
           
           <div class="imgcontainer">
-            <img src="./Images/Sonicds.jpg" alt="Avatar" class="image">
+            <img src="./assets/img/Sonicds.jpg" alt="Avatar" class="image">
             <div class="middle">
             <a href="#" class="button1">Sonic</a>
           </div>
@@ -199,3 +236,4 @@
 
 </body>
 </html>
+
