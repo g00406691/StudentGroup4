@@ -26,13 +26,17 @@
     .w3-button:hover {
       background-color: rgba(52,52,52,0.3) !important;
     }
-
-    .bgimg-1 {
-  width: 100%;
-  background-image: url("assets/img/Image.jpg");
-  min-height: 100%;
-}
-
+	
+	.bgimage {
+	background-image: url('assets/img/Image.JPEG');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+  }
+	
 
   </style>
 </head>
@@ -105,42 +109,28 @@
     </div>
 
     <!-- Welcome Section -->
-    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; font-size: 19px;" id="band">
       <h2 class="w3-wide">Welcome to Next-Level Gaming</h2>
       <p class="w3-opacity"><i>About Us</i></p>
       <p class="w3-justify w3-center">At Next-Level Gaming, we believe that every gamer deserves access
-        to affordable, high-quality games. <br> Whether you're looking to buy or sell a game, we're here to make the
+        to affordable, high-quality games. Whether you're looking to buy or sell a game, we're here to make the
         process easy and enjoyable.
         So browse our selection, find your next gaming adventure, and join our community of passionate gamers today.</p>
-      </p>
-
-
-      <!--<div class="w3-row w3-padding-32">
-        <div class="w3-third">
-          <p>Put something here</p>
-          <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Put something here</p>
-          <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
-        </div>
-        <div class="w3-third">
-          <p>Put something here</p>
-          <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
-        </div>
-      </div>
-    </div>-->
-
-    <header class="bgimg-1 w3-display-container" id="home">
-      <div class="w3-display-left w3-text-white" style="padding:48px">
-        <span class="w3-jumbo w3-hide-small">Upgrade your setup today</span><br>
-        <span class="w3-xxlarge w3-hide-large w3-hide-medium">Upgrade your setup today</span><br>
-        <span class="w3-large">Browse our library of great value games.</span>
-        <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Browse Now</a></p>
-      </div> 
+      </p> <br> <br>
+    </div>
+	
+	<div class="w3-display-container bgimage " id="home">
+  <div class="w3-display-middle w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Upgrade your setup today</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Upgrade your setup today</span><br>
+    <span class="w3-large">Browse our library of great value games.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Browse Now</a></p>
+  </div>
+</div>
+<br>
 
     <!-- The Tour Section -->
-    <div class="w3-red" id="featured">
+    <div class="w3-red" id="tour">
       <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
         <h2 class="w3-wide w3-center">Featured Games</h2>
         <br>
@@ -151,8 +141,7 @@
             <div class="w3-container w3-white">
               <p><b>The Witcher 3: Wild Hunt</b></p>
               <p class="w3-opacity">€15.99</p>
-              <p>The Witcher 3: Wild Hunt features a massive open world, a sprawling narrative and easily 100 hours
-                of content based on exploring the world and meeting its inhabitants.</p>
+              <p>Edit</p>
               <button class="w3-button w3-red w3-margin-bottom"
                 onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
             </div>
@@ -162,9 +151,7 @@
             <div class="w3-container w3-white">
               <p><b>Red Dead Redemption 2</b></p>
               <p class="w3-opacity">€19.99</p>
-              <p>Red Dead Redemption 2 is a western tale, filled with gunslinging-action, horseback exploration, greed,
-                loyalty,
-                and the overall treachery of the old west.</p>
+              <p>Edit</p>
               <button class="w3-button w3-red w3-margin-bottom"
                 onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
             </div>
@@ -174,8 +161,7 @@
             <div class="w3-container w3-white">
               <p><b>Final Fantasy XV</b></p>
               <p class="w3-opacity">€14.99</p>
-              <p>Final Fantasy XV is a RPG set in somewhat modern times but with fantasy and sci-fi influences.
-                the story focuses on Noctis Lucis Caelum, a prince on an epic journey from the kingdom of Lucis.</p>
+              <p>Edit</p>
               <button class="w3-button w3-red w3-margin-bottom"
                 onclick="document.getElementById('ticketModal').style.display='block'">Add to Cart</button>
             </div>
