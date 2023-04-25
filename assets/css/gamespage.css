@@ -75,6 +75,10 @@ img{
     border-radius: 5px;
 }
 
+.flip-card{
+  padding-left: 20px;
+}
+
 .button1{
     width: 90%;
     background: #e12901;
@@ -134,6 +138,13 @@ img{
   }
   
   .Game-tag{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Game-tags{
+    padding-top: 100px;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
