@@ -5,29 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Games.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"rel="stylesheet"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Games</title>
 </head>
 <body>
 
-  <header>
-    <div class="logo">
-      <h1 href="./Homepage.css"><img src="./Images/logo.png" alt="Next Level Gaming Logo">Next Level Gaming</h1>
+  <div class="w3-top">
+    <div class="w3-red w3-bar w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu" style="float: right;"><i class="fa fa-bars"></i></a>
+      <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
+        <h1>
+          <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
+          Next Level Gaming
+        </h1>
+
+        <script>
+          $(function() {
+        $("#logopng").hover(
+            function() {
+                $(this).attr("src", "assets/img/logo-gif (2).gif");
+            },
+            function() {
+                $(this).attr("src", "assets/img/logo.png");
+            }                         
+        );                  
+    });
+        </script>
       </div>
-      
-      <div class="navbar">
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Browse Games</a></li>
-          <li><a href="#">Sell Games</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="Contacts.html">Contact Us</a></li>
-        </ul>
-      </nav>
-      </div>
-    </header>
+
+      <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Contact Us">
+        <img src="assets/img/form.png" alt="Contact" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="cart.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Cart">
+        <img src="assets/img/shopping-cart2.png" alt="Cart" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="games.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Browse">
+        <img src="assets/img/search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Home">
+        <img src="assets/img/homeicon2.png" alt="Home" style="width: 35px; padding-top: 10px;">
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top " style="margin-top:46px">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Home</a>
+    <a href="games.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Browse</a>
+    <a href="cart.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Cart</a>
+    <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+  </div>
 
     <h1 class="Game-tag">Playstation</h1>
 
