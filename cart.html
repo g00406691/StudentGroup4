@@ -33,6 +33,15 @@
     .w3-button:hover {
       background-color: rgba(52,52,52,0.3) !important;
     }
+	
+	.w3-container{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 10px;
+	
+	
+}
+
 
   </style>
 </head>
@@ -91,43 +100,41 @@
   </div>
 
   <div class="container my-5">
-    <h2>Products</h2>
+  <br><br>
     <div class="row">
-      <div class="col-md-4 my-3">
-        <div class="card">
-          <img class="card-img-top" src="assets/img/IMG_5312.jpg" alt="Product Image">
-          <div class="card-body">
-            <h5 class="card-title">Featured Games</h5>
-            <p class="card-text">The Whicher 3.</p>
-            <p class="card-text">€15.99</p>
-            <a href="#" class="btn btn-primary" onclick="addToCart('The Whicher 3', 15.99)">Add to Cart</a>
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px;">
+          <div class="w3-third w3-margin-bottom">
+            <img src="assets/img/IMG_5312.jpg" alt="The Witcher 3" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>The Witcher 3: Wild Hunt</b></p>
+              <p class="w3-opacity">PS4</p>
+              <p>€15.99</p>
+              <button class="w3-button w3-red w3-margin-bottom"
+               onclick="addToCart('The Witcher 3: Wild Hunt', 15.99)" style="border-radius: 10px;">Add to Cart</button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="assets/img/IMG_5307.jpg" alt="Red Dead Redemption 2" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Red Dead Redemption 2</b></p>
+              <p class="w3-opacity">PS4</p>
+              <p>€19.99</p>
+              <button class="w3-button w3-red w3-margin-bottom"
+                onclick="addToCart('Red Dead Redemption 2', 19.99)" style="border-radius: 10px;">Add to Cart</button>
+            </div>
+          </div>
+          <div class="w3-third w3-margin-bottom">
+            <img src="assets/img/IMG_5304.jpg" alt="Final Fantasy XV" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container w3-white">
+              <p><b>Final Fantasy XV</b></p>
+              <p class="w3-opacity">PS4</p>
+              <p>€14.99</p>
+              <button class="w3-button w3-red w3-margin-bottom"
+                onclick="addToCart('Final Fantasy XV', 14.99)" style="border-radius: 10px;">Add to Cart</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4 my-3">
-        <div class="card">
-          <img class="card-img-top" src="assets/img/IMG_5307.jpg" alt="Product Image">
-          <div class="card-body">
-            <h5 class="card-title">Featured games</h5>
-            <p class="card-text">Red Dead Redemption 2</p>
-            <p class="card-text">€19.99</p>
-            <a href="#" class="btn btn-primary" onclick="addToCart('Red Dead Redemption 2', 19.99)">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 my-3">
-        <div class="card">
-          <img class="card-img-top" src="assets/img/IMG_5304.jpg" alt="Product Image">
-          <div class="card-body">
-            <h5 class="card-title">Featured Games</h5>
-            <p class="card-text">Final Fantasy 15.</p>
-            <p class="card-text">€14.99</p>
-            <a href="#" class="btn btn-primary" onclick="addToCart('Final Fantasy 15', 14.99)">Add to Cart</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
     aria-hidden="true">
@@ -177,8 +184,8 @@
         </tr>
       </tfoot>
     </table>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#checkoutModal"
-      onclick="showCheckout()">Checkout</button>
+    <button type="button" class="btn" data-toggle="modal" data-target="#checkoutModal"
+      onclick="showCheckout()"  style="background-color: #f44336; color: white;">Checkout</button>
   </div>
 
   <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel"
