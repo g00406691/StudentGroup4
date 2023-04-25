@@ -1,0 +1,133 @@
+<head>
+  <title>Next-Level Gaming | Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Fredoka One', cursive;
+    }
+
+    h1 {
+      font-family: 'Fredoka One', cursive;
+    }
+
+    .mySlides {
+      display: none
+    }
+
+    .w3-button:hover {
+      background-color: rgba(52,52,52,0.3) !important;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-red w3-bar w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu" style="float: right;"><i class="fa fa-bars"></i></a>
+      <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
+        <h1>
+          <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
+          Next Level Gaming
+        </h1>
+
+        <script>
+          $(function () {
+            $("#logopng").hover(
+              function () {
+                $(this).attr("src", "assets/img/logo-gif (2).gif");
+              },
+              function () {
+                $(this).attr("src", "assets/img/logo.png");
+              }
+            );
+          });
+        </script>
+      </div>
+
+      <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Contact Us">
+        <img src="assets/img/form.png" alt="Contact" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="cart.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Cart">
+        <img src="assets/img/shopping-cart2.png" alt="Cart" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="games.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Search">
+        <img src="assets/img/search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Home">
+        <img src="assets/img/homeicon2.png" alt="Home" style="width: 35px; padding-top: 10px;">
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top " style="margin-top:46px">
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+  </div>
+  <section id="featured-games">
+
+    <div class="imgcontainer">
+      <img src="IMG_5312.jpg" alt="Avatar" class="image">
+      <div class="middle">
+        <a href="#" class="button1">Playstation</a>
+      </div>
+    </div>
+
+    <div class="imgcontainer">
+      <img src="20230321_023205.jpg" alt="Avatar" class="image">
+      <div class="middle">
+        <a href="#" class="button1">Xbox</a>
+      </div>
+    </div>
+
+    <div class="imgcontainer">
+      <img src="20230321_023542 (1).jpg" alt="Avatar" class="image">
+      <div class="middle">
+        <a href="#" class="button1">Nintendo</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="container3">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Contact Us</h3>
+          <p>ATU,</p>
+          <p>Galway Mayo Campus,</p>
+          <p>Co. Galway</p>
+        </div>
+        <div class="col-md-6">
+          <h3>About Us</h3>
+          <p>At Next-Level Gaming, we believe that every gamer deserves access
+            to affordable, high-quality games. That's why we created our online marketplace
+            for second-hand games. Whether you're looking to buy or sell a game, we're here to make the process easy and
+            enjoyable.
+            So browse our selection, find your next gaming adventure, and join our community of passionate gamers today.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
