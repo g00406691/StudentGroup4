@@ -38,10 +38,7 @@
 	border: 1px solid #ccc;
 	border-radius: 5px;
 	padding: 10px;
-	
-	
-}
-
+	}
 
   </style>
 </head>
@@ -54,7 +51,7 @@
         onclick="myFunction()" title="Toggle Navigation Menu" style="float: right;"><i class="fa fa-bars"></i></a>
         <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
           <h1>
-            <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
+           <a href="index.html"><img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;"></a>
             Next Level Gaming
           </h1>
   
@@ -185,7 +182,7 @@
       </tfoot>
     </table>
     <button type="button" class="btn" data-toggle="modal" data-target="#checkoutModal"
-      onclick="showCheckout()"  style="background-color: #f44336; color: white;">Checkout</button>
+      onclick="showCheckout()" style="background-color: #f44336; color: white;">Checkout</button>
   </div>
 
   <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel"
@@ -203,21 +200,22 @@
             <div class="form-group">
               <label for="cardNumber">Card Number</label>
               <input type="text" class="form-control" id="cardNumber" placeholder="Enter card number">
-            </div>
+            </div><br>
             <div class="form-group">
               <label for="cardHolderName">Card Holder Name</label>
               <input type="text" class="form-control" id="cardHolderName" placeholder="Enter card holder name">
-              <div class="form-row">
+              <div class="form-row"><br>
                 <div class="form-group col-md-6">
                   <label for="expiryDate">Expiry Date</label>
                   <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
-                </div>
+                </div><br>
                 <div class="form-group col-md-6">
                   <label for="cvv">CVV</label>
                   <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
                 </div>
-              </div>
-              <button type="submit" class="btn btn-primary" onclick="placeOrder()">Place Order</button>
+              </div><br>
+              <button type="submit" class="btn btn-primary" onclick="placeOrder()" 
+			  style="background-color: #f44336; color: white;">Place Order</button>
           </form>
         </div>
       </div>
