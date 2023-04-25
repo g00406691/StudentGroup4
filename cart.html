@@ -2,63 +2,127 @@
 <html>
 
 <head>
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="javascript" href="assets/js/cart.js" </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next Level Gaming | Cart</title>
+
+  <link rel="stylesheet" href="assets/css/homepage.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="Custom.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper-base.min.js"
+    integrity="sha384-2QePCGcPGi/C0t0sCtYgn1p9hLr0vT7Vj+bLfBdVNnnkW/OoPhlGm7ZsYs1m/F8W"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="javascript" href="assets/js/cart.js">
+  <style>
+    body {
+      font-family: 'Fredoka One', cursive;
+    }
+
+    h1 {
+      font-family: 'Fredoka One', cursive;
+    }
+
+    .w3-button:hover {
+      background-color: rgba(52,52,52,0.3) !important;
+    }
+
+  </style>
+</head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Shopping Cart</a>
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Products</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Cart</a>
-      </li>
-    </ul>
-    <div class="form-inline my-2 my-lg-0">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-toggle="modal"
-        data-target="#loginModal">Login</button>
+  <!-- Navbar -->
+  <div class="w3-top">
+    <div class="w3-red w3-bar w3-card">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu" style="float: right;"><i class="fa fa-bars"></i></a>
+        <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
+          <h1>
+            <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
+            Next Level Gaming
+          </h1>
+  
+          <script>
+            $(function () {
+              $("#logopng").hover(
+                function () {
+                  $(this).attr("src", "assets/img/logo-gif (2).gif");
+                },
+                function () {
+                  $(this).attr("src", "assets/img/logo.png");
+                }
+              );
+            });
+          </script>
+        </div>
+
+      <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Contact Us">
+        <img src="assets/img/form.png" alt="Contact" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="cart.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Cart">
+        <img src="assets/img/shopping-cart2.png" alt="Cart" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="games.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Search">
+        <img src="assets/img/search2.png" alt="Search" style="width: 35px; padding-top: 10px;">
+      </a>
+
+      <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small w3-right" title="Home">
+        <img src="assets/img/homeicon2.png" alt="Home" style="width: 35px; padding-top: 10px;">
+      </a>
+
     </div>
-  </nav>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-top " style="margin-top:46px">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Home</a>
+    <a href="games.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Games</a>
+    <a href="cart.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Cart</a>
+    <a href="contacts.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Contact</a>
+  </div>
 
   <div class="container my-5">
     <h2>Products</h2>
     <div class="row">
       <div class="col-md-4 my-3">
         <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Product Image">
+          <img class="card-img-top" src="assets/img/IMG_5312.jpg" alt="Product Image">
           <div class="card-body">
             <h5 class="card-title">Featured Games</h5>
             <p class="card-text">The Whicher 3.</p>
             <p class="card-text">€15.99</p>
-            <a href="#" class="btn btn-primary" onclick="addToCart('Product 1', 10)">Add to Cart</a>
+            <a href="#" class="btn btn-primary" onclick="addToCart('The Whicher 3', 15.99)">Add to Cart</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 my-3">
         <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Product Image">
+          <img class="card-img-top" src="assets/img/IMG_5307.jpg" alt="Product Image">
           <div class="card-body">
             <h5 class="card-title">Featured games</h5>
             <p class="card-text">Red Dead Redemption 2</p>
             <p class="card-text">€19.99</p>
-            <a href="#" class="btn btn-primary" onclick="addToCart('Product 2', 15)">Add to Cart</a>
+            <a href="#" class="btn btn-primary" onclick="addToCart('Red Dead Redemption 2', 19.99)">Add to Cart</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 my-3">
         <div class="card">
-          <img class="card-img-top" src="https://via.placeholder.com/150" alt="Product Image">
+          <img class="card-img-top" src="assets/img/IMG_5304.jpg" alt="Product Image">
           <div class="card-body">
             <h5 class="card-title">Featured Games</h5>
             <p class="card-text">Final Fantasy 15.</p>
             <p class="card-text">€14.99</p>
-            <a href="#" class="btn btn-primary" onclick="addToCart('Product 3', 20)">Add to Cart</a>
+            <a href="#" class="btn btn-primary" onclick="addToCart('Final Fantasy 15', 14.99)">Add to Cart</a>
           </div>
         </div>
       </div>
@@ -67,7 +131,7 @@
 
   <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
     aria-hidden="true">
-    <div class="modal-dialog" role <div class="modal-content">
+    <div class="modal-dialog" class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="loginModalLabel">Login</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -108,16 +172,8 @@
       </tbody>
       <tfoot>
         <tr>
-          <td colspan="4" class="text-right">Subtotal:</td>
-          <td id="subtotal">$0.00</td>
-        </tr>
-        <tr>
-          <td colspan="4" class="text-right">Tax:</td>
-          <td id="tax">$0.00</td>
-        </tr>
-        <tr>
           <td colspan="4" class="text-right">Total:</td>
-          <td id="total">$0.00</td>
+          <td id="subtotal">€0.00</td>
         </tr>
       </tfoot>
     </table>
@@ -165,7 +221,92 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    window.addEventListener('beforeunload', function () {
+      // Remove the cart data from window storage
+      window.localStorage.removeItem('cart');
+    });
 
+    function addToCart(gameName, price) {
+      // Retrieve the cart from window storage
+      let cart = JSON.parse(window.localStorage.getItem('cart')) || {};
+
+      // Add the new item to the cart
+      if (cart[gameName]) {
+        cart[gameName].quantity++;
+      } else {
+        cart[gameName] = {
+          price: price,
+          quantity: 1
+        };
+      }
+
+      // Store the updated cart in window storage
+      window.localStorage.setItem('cart', JSON.stringify(cart));
+
+      console.log(cart);
+
+      displayCart();
+    }
+
+    function displayCart() {
+      // Retrieve the cart from window storage
+      let cart = JSON.parse(window.localStorage.getItem('cart')) || {};
+
+      // Get the table body element
+      let cartItems = document.getElementById('cartItems');
+
+      // Clear the table body element
+      cartItems.innerHTML = '';
+
+      // Initialize subtotal, tax, and total
+      let subtotal = 0;
+      let total = 0;
+
+      // Loop through the cart items and add them to the table
+      Object.keys(cart).forEach((itemName, index) => {
+        let item = cart[itemName];
+        let itemTotal = item.price * item.quantity;
+        subtotal += itemTotal;
+
+        // Create a new table row for the item
+        let row = document.createElement('tr');
+
+        // Add the item index column
+        let indexCell = document.createElement('td');
+        indexCell.textContent = index + 1;
+        row.appendChild(indexCell);
+
+        // Add the item name column
+        let nameCell = document.createElement('td');
+        nameCell.textContent = itemName;
+        row.appendChild(nameCell);
+
+        // Add the item price column
+        let priceCell = document.createElement('td');
+        priceCell.textContent = '€' + item.price.toFixed(2);
+        row.appendChild(priceCell);
+
+        // Add the item quantity column
+        let quantityCell = document.createElement('td');
+        quantityCell.textContent = item.quantity;
+        row.appendChild(quantityCell);
+
+        // Add the item total column
+        let totalCell = document.createElement('td');
+        totalCell.textContent = '€' + itemTotal.toFixed(2);
+        row.appendChild(totalCell);
+
+        // Add the row to the table body
+        cartItems.appendChild(row);
+      });
+
+      // Update the subtotal, tax, and total elements
+      document.getElementById('subtotal').textContent = '€' + subtotal.toFixed(2);
+
+    }
+
+  </script>
 </body>
 
 </html>
