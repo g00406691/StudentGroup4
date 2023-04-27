@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap"rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/popup.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Games</title>
+
+
 
 </head>
 <body>
@@ -20,7 +23,7 @@
         onclick="myFunction()" title="Toggle Navigation Menu" style="float: right;"><i class="fa fa-bars"></i></a>
       <div class="logo w3-bar-item w3-hide-small" style="max-width:500px;">
         <h1>
-          <a href="index.html"><img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;"></a>
+          <img id="logopng" src="assets/img/logo.png" alt="Next Level Gaming Logo" style="width: 50px;">
           Next Level Gaming
         </h1>
 
@@ -70,37 +73,69 @@
     
 
     <div class="imgcontainer">
-        <img src="assets/img/farcryps4.jpg" alt="Avatar" class="image">
+        <img src="./assets/img/farcryps4.jpg" alt="Avatar" class="image">
         <div class="middle">
-        <a href="#" class="button1">Far Cry</a>
-      </div>
+        <a class="button1" onclick="openPopup()">Far Cry</a>
+        <div class="popup" id="popup">
+          <img src="./assets/img/logo.png" alt="">
+          <h4>Far Cry 4</h4>
+          <p>Set in the fictional Himalayan country of Kyrat, the game follows Ajay Ghale, a young Kyrati-American, who becomes caught in a civil war between Kyrat's Royal Army</p>
+          <button type="button" onclick="closePopup()">Go Back</button>
+        </div>
+        </div>
       </div>
 
       <div class="imgcontainer">
         <img src="./assets/img/hitmanps4.jpg" alt="Avatar" class="image">
         <div class="middle">
-        <a href="#" class="button1">Hitman</a>
+        <a class="button1" onclick="openPopup1()">Hitman</a>
+        <div class="popup1" id="popup1">
+          <img src="./assets/img/logo.png" alt="">
+          <h4>Hitman</h4>
+          <p>Hitman is an action-adventure stealth video game in which players control a genetically enhanced assassin called Agent 47 from a third-person perspective as he carries out assassinations of various targets across the globe.</p>
+          <button type="button" onclick="closePopup1()">Go Back</button>
+        </div>
       </div>
       </div>
 
       <div class="imgcontainer">
         <img src="./assets/img/horizonps4.jpg" alt="Avatar" class="image">
         <div class="middle">
-        <a href="#" class="button1">Horizon</a>
+          <a class="button1" onclick="openPopup3()">Horizon</a>
+          <div class="popup3" id="popup3">
+            <img src="./assets/img/logo.png" alt="">
+          <h4>Horizon</h4>
+          <p>Horizon Zero Dawn is an action role-playing game played from a third-person view. Players take control of Aloy, a hunter who ventures through a post-apocalyptic land ruled by robotic creatures.</p>
+          <button type="button" onclick="closePopup3()">Go Back</button>
       </div>
       </div>
-   
+   </div>
+
       <div class="imgcontainer">
         <img src="./assets/img/finalfantasyps4.jpg" alt="Avatar" class="image">
         <div class="middle">
-        <a href="#" class="button1">FF XV</a>
+          <a class="button1" onclick="openPopup4()">FF XV</a>
+          <div class="popup4" id="popup4">
+            <img src="./assets/img/logo.png" alt="">
+            <h4>Final Fantasy</h4>
+            <p>Final Fantasy XV is an open world, action role-playing game in which players assume control of Noctis Lucis Caelum</p>
+            <button type="button" onclick="closePopup4()">Go Back</button>
+          </div>
       </div>
       </div>
      
       <div class="imgcontainer">
         <img src="./assets/img/reddeadps4.jpg" alt="Avatar" class="image">
         <div class="middle">
-        <a href="#" class="button1">Red Dead</a>
+          <a class="button1" onclick="openPopup5()">Red Dead</a>
+          <div class="popup5" id="popup5">
+            <img src="./assets/img/logo.png" alt="">
+            <h4>Red Dead 2</h4>
+            <p>The story is set in a fictionalized representation of the United States in 1899 and follows the exploits of outlaw Arthur Morgan, a member of the Van der Linde gang, who must deal with the decline of the Wild West.</p>
+            <h3 class="card-text">€19.99</h3>
+            <button href="#" class="btn btn-primary" onclick="addToCart('Red Dead Redemption 2', 19.99)">Add to Cart</button>
+            <button type="button" onclick="closePopup5()">Go Back</button>
+          </div>
       </div>
       </div>
 
@@ -109,35 +144,65 @@
         <div class="imgcontainer">
             <img src="./assets/img/batmanxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Batman</a>
+              <a class="button1" onclick="openPopup6()">Batman</a>
+              <div class="popup6" id="popup6">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Arkham Origins</h4>
+                <p>Arkham Origins is an open world action-adventure game incorporating stealth game tactics.</p>
+                <button type="button" onclick="closePopup6()">Go Back</button>
+              </div>
           </div>
           </div>
         
           <div class="imgcontainer">
             <img src="./assets/img/bo3xbox.png" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Black Ops 3</a>
+              <a class="button1" onclick="openPopup7()">COD BO3</a>
+              <div class="popup7" id="popup7">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Black Ops 3</h4>
+                <p>The Future of Combat. Black Ops III engrosses players in a dark and gritty future, where a new breed of Black Ops soldier has emerged.</p>
+                <button type="button" onclick="closePopup7()">Go Back</button>
+              </div>
           </div>
           </div>
         
           <div class="imgcontainer">
             <img src="./assets/img/codxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">MW3</a>
+              <a class="button1" onclick="openPopup8()">COD MW3</a>
+              <div class="popup8" id="popup8">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Modern Warfare 3</h4>
+                <p>The game sees the return of former Task Force 141 Captain John "Soap" MacTavish (voiced by Kevin McKidd), former SAS Captain John Price (Billy Murray) and Russian informant "Nikolai"</p>
+                <button type="button" onclick="closePopup8()">Go Back</button>
+              </div>
           </div>
           </div>
         
           <div class="imgcontainer">
             <img src="./assets/img/minecraftxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Minecraft</a>
+              <a class="button1" onclick="openPopup9()">Minecraft</a>
+              <div class="popup9" id="popup9">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Minecraft</h4>
+                <p>In Minecraft, players explore a blocky, procedurally generated, three-dimensional world with virtually infinite terrain and may discover and extract raw materials, craft tools and items, and build structures.</p>
+                <button type="button" onclick="closePopup9()">Go Back</button>
+              </div>
           </div>
           </div>
           
           <div class="imgcontainer">
             <img src="./assets/img/Farcryxbox.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Far Cry 2</a>
+              <a class="button1" onclick="openPopup10()">Far Cry 2</a>
+              <div class="popup10" id="popup10">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Far Cry 2</h4>
+                <p>Set in a fictional African country engulfed in civil war, the storyline follows a mercenary who is assigned to kill the Jackal, a weapons dealer inflaming the conflict.</p>
+                <button type="button" onclick="closePopup10()">Go Back</button>
+              </div>
           </div>
           </div>
 
@@ -146,42 +211,72 @@
         <div class="imgcontainer">
             <img src="./assets/img/mariodsi.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Mario</a>
+              <a class="button1" onclick="openPopup11()">Mario Bros</a>
+              <div class="popup11" id="popup11">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Mario Bros</h4>
+                <p>Super Mario Bros. is a platform game. In the game, Mario must race through the Mushroom Kingdom and save Princess Toadstool (later Princess Peach) from Bowser.</p>
+                <button type="button" onclick="closePopup11()">Go Back</button>
+              </div>
           </div>
           </div>
         
           <div class="imgcontainer">
             <img src="./assets/img/braintrainingds.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Brain</a>
+              <a  class="button1" onclick="openPopup12()">Brain Training</a>
+              <div class="popup12" id="popup12">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Brain Trainer</h4>
+                <p>Train Your Brain in Minutes a Day is a series of mini-games designed to give brains a workout. Activities include performing simple math problems, counting people going in and out of a house.</p>
+                <button type="button" onclick="closePopup12()">Go Back</button>
+              </div>
           </div>
           </div>
         
           <div class="imgcontainer">
             <img src="./assets/img/marioandsonicds.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Olympic</a>
+              <a class="button1" onclick="openPopup13()">Olympic</a>
+              <div class="popup13" id="popup13">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Mario & Sonic at the Olympic Games</h4>
+                <p>Mario & Sonic at the Olympic Games presents DS players the chance to play as any one of 16 video game characters eight from the world of Mario and eight from the world of Sonic</p>
+                <button type="button" onclick="closePopup13()">Go Back</button>
+              </div>
           </div>
           </div>
         
           <div class="imgcontainer">
             <img src="./assets/img/mariokartds.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Mario Kart</a>
+              <a class="button1" onclick="openPopup14()">Mario Kart</a>
+              <div class="popup14" id="popup14">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Mario Kart</h4>
+                <p>Mario Kart DS is a racing game in which the player races in a kart against other racers as one of 12 characters from the Mario series. The player has access to Mario, Luigi, Peach, Toad, Yoshi, Donkey Kong, Wario, and Bowser</p>
+                <button type="button" onclick="closePopup14()">Go Back</button>
+              </div>
           </div>
           </div>
           
           <div class="imgcontainer">
             <img src="./assets/img/Sonicds.jpg" alt="Avatar" class="image">
             <div class="middle">
-            <a href="#" class="button1">Sonic</a>
+              <a class="button1" onclick="openPopup15()">Sonic</a>
+              <div class="popup15" id="popup15">
+                <img src="./assets/img/logo.png" alt="">
+                <h4>Sonic Rush Adventure</h4>
+                <p>Sonic Rush Adventure puts you in control of the fastest thing on two legs as he sprints his way through seven action-packed islands collecting precious rings and battling a band of unruly pirates.</p>
+                <button type="button" onclick="closePopup15()">Go Back</button>
+              </div>
           </div>
           </div>
 
         
    
-    
-
+      <script src="./assets/js/cart.js"></script>
+      <script src="./assets/js/popup.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
 
